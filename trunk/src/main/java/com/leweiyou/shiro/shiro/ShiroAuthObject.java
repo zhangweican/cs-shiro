@@ -12,11 +12,11 @@ import com.leweiyou.shiro.util.Commons;
  */
 public abstract class ShiroAuthObject {
 	
-	public SessionUser getSessionUser(){
+	public static SessionUser getSessionUser(){
 		return (SessionUser) SecurityUtils.getSubject().getSession().getAttribute(Commons.SessionAcount);
 	}
 	
-	public void setSessionUser(SessionUser sessionUser){
+	public static void setSessionUser(SessionUser sessionUser){
 		SecurityUtils.getSubject().getSession().setAttribute(Commons.SessionAcount, sessionUser);
 	}
 	
