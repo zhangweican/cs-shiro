@@ -55,8 +55,8 @@ public class UserRealm extends AuthorizingRealm {
 	 */
 	@Override
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-
-		ShiroAuthObject.User user = ShiroAuthObjectFactory.getInstance().getCompareUser();
+		String account = (String) token.getPrincipal();
+		ShiroAuthObject.User user = ShiroAuthObjectFactory.getInstance().getCompareUser(account);
 		if (user == null) {
 			// 木有找到用户
 			throw new AuthenticationException("账号或密码错误");

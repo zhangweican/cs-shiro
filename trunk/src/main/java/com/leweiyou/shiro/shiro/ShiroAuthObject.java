@@ -24,9 +24,9 @@ public abstract class ShiroAuthObject {
 	 * 获取需要比对的用户信息，一般从数据库获取正确的用户信息
 	 * @return
 	 */
-	public abstract User getCompareUser();
+	public abstract ShiroAuthObject.User getCompareUser(String account);
 	
-	class User{
+	public class User{
 		private String account;
 		private String password;
 		
