@@ -26,6 +26,14 @@ public abstract class ShiroAuthObject {
 	 */
 	public abstract ShiroAuthObject.User getCompareUser(String account);
 	
+	/**
+	 * 接收用户的的输入信息，生成需要比对的密码。
+	 * @param account
+	 * @param password
+	 * @return
+	 */
+	public abstract String encryptMatcherPassword(String account,String password);
+	
 	public class User{
 		private String account;
 		private String password;

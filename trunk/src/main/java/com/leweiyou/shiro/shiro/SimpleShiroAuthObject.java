@@ -12,4 +12,9 @@ public class SimpleShiroAuthObject extends ShiroAuthObject {
 		return new User("admin",ShiroEndecryptUtils.md5Password("admin", "123456"));
 	}
 
+	@Override
+	public String encryptMatcherPassword(String account, String password) {
+		return ShiroEndecryptUtils.md5Password(account, password);
+	}
+
 }
