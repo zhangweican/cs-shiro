@@ -25,6 +25,7 @@ public class CustomCredentialsMatcher extends SimpleCredentialsMatcher {
 
 	// 将传进来密码加密方法
 	private String encrypt(String username,String password) {
-		return ShiroEndecryptUtils.md5Password(username, password);
+		return ShiroAuthObjectFactory.getInstance().encryptMatcherPassword(username, password);
+		//return ShiroEndecryptUtils.md5Encode(username, password);
 	}
 }
