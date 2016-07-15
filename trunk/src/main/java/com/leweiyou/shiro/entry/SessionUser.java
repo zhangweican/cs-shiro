@@ -15,6 +15,9 @@ public class SessionUser implements Serializable{
 	
 	private static final long serialVersionUID = 8541307043821592596L;
 	
+	//用户本地IP
+	private String localIP = null;
+	
 	//用户ID
 	private String userId = null;
 	//用户登录账号名
@@ -25,7 +28,6 @@ public class SessionUser implements Serializable{
 	
 	//用户拥有的权限
 	private Set<String> rights = new HashSet<String>();
-	private String tree = null;
 	
 	//可扩展属性
 	private Map<String,Object> extAttrs = new HashMap<String, Object>();
@@ -54,9 +56,6 @@ public class SessionUser implements Serializable{
 	public void setRights(Set<String> rights) {
 		this.rights = rights;
 	}
-	public String getTree() {
-		return tree;
-	}
 	public void addRoleId(String roleId) {
 		this.roleIds.add(roleId);
 	}
@@ -65,6 +64,12 @@ public class SessionUser implements Serializable{
 	}
 	public void setExtAttrs(Map<String, Object> extAttrs) {
 		this.extAttrs = extAttrs;
+	}
+	public String getLocalIP() {
+		return localIP;
+	}
+	public void setLocalIP(String localIP) {
+		this.localIP = localIP;
 	}
 	
 	
