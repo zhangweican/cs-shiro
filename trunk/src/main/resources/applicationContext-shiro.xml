@@ -73,7 +73,7 @@
         <!-- session存储的实现 -->  
         <!-- property name="sessionDAO" ref="sessionDAO" /-->  
         <!-- sessionIdCookie的实现,用于重写覆盖容器默认的JSESSIONID -->  
-        <property name="sessionIdCookie" ref="sharesession" />  
+        <!-- property name="sessionIdCookie" ref="sharesession" /-->  
         <!-- 定时检查失效的session -->  
         <property name="sessionValidationSchedulerEnabled" value="true" />  
   
