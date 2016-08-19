@@ -22,6 +22,10 @@ public class SessionUser implements Serializable{
 	private String userId = null;
 	//用户登录账号名
 	private String account = null;
+	//用户手机
+	private String phone = null;
+	//用户邮箱
+	private String email = null;
 	
 	//用户所属于的角色集合
 	private Set<String> roleIds = new HashSet<String>();
@@ -70,6 +74,18 @@ public class SessionUser implements Serializable{
 	}
 	public void setLocalIP(String localIP) {
 		this.localIP = localIP;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	
